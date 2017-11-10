@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Transition from './Transition';
+import Sidebar from './Sidebar';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if (window.pageYOffset !== 0) {
+  console.alert('aaa')
+}
+
+ReactDOM.render(<Sidebar />, document.getElementById('root'));
 registerServiceWorker();
