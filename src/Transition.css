@@ -1,0 +1,43 @@
+h1 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 20%;
+  border-bottom: 5px solid yellow;
+  z-index: 1;
+  animation: trans 10s infinite 5s;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 5px solid red;
+  z-index: 0;
+}
+
+@keyframes trans {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 80%;
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
